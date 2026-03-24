@@ -58,6 +58,23 @@ export default function HomePage() {
       {/* AIO: FAQ Schema for AI Overview extraction */}
       <JsonLd data={generateFAQSchema(faqs)} />
 
+      {/* AIO: Speakable Schema - tells AI which content is most important to read aloud / extract */}
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'SocialBridge株式会社 - テクノロジーの力で社会課題を解決する',
+          url: `${SITE_URL}/`,
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#about-heading', '#services-heading', '#faq-heading', '.section-subheading'],
+          },
+          mainEntity: {
+            '@id': `${SITE_URL}/#organization`,
+          },
+        }}
+      />
+
       {/* AIO: HowTo Schema for step-by-step content */}
       <JsonLd
         data={generateHowToSchema({

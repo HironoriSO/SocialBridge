@@ -6,7 +6,11 @@ import {
   generateLocalBusinessSchema,
 } from '@/lib/jsonld';
 import { JsonLd } from '@/components/JsonLd';
+import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import './globals.css';
+
+// Set your GA4 Measurement ID here
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
 
 // Comprehensive default metadata for SEO
 export const metadata: Metadata = {
@@ -130,6 +134,8 @@ export default function RootLayout({
           メインコンテンツへスキップ
         </a>
         {children}
+        {/* Google Analytics */}
+        <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );

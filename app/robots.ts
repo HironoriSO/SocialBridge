@@ -41,7 +41,16 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'PerplexityBot',
         allow: '/',
       },
+      {
+        userAgent: 'Applebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bytespider',
+        allow: '/',
+      },
     ],
     sitemap: 'https://social-bridge.net/sitemap.xml',
+    // Note: llms.txt available at /llms.txt and /llms-full.txt
   };
 }
