@@ -49,7 +49,11 @@ export function generateOrganizationSchema() {
         addressCountry: 'JP',
       },
     ],
-    sameAs: [COMPANY_INFO.social.facebook],
+    sameAs: [
+      COMPANY_INFO.social.facebook,
+      COMPANY_INFO.social.youtube,
+      COMPANY_INFO.social.note,
+    ],
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
       minValue: 1,
@@ -226,6 +230,37 @@ export function generateServiceSchema(service: {
     areaServed: {
       '@type': 'Country',
       name: 'Japan',
+    },
+  };
+}
+
+// VideoObject Schema - for YouTube video SEO
+export function generateVideoSchema(video: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  contentUrl: string;
+  embedUrl: string;
+  duration?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: video.thumbnailUrl,
+    uploadDate: video.uploadDate,
+    contentUrl: video.contentUrl,
+    embedUrl: video.embedUrl,
+    duration: video.duration,
+    publisher: {
+      '@type': 'Organization',
+      name: COMPANY_INFO.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/logo.png`,
+      },
     },
   };
 }
