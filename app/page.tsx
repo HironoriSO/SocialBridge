@@ -281,6 +281,101 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* YouTube / Video Content Section - drives traffic to DX/MEO service */}
+        <section className="py-16 md:py-24 bg-white" aria-labelledby="youtube-heading">
+          <div className="container mx-auto px-4">
+            <h2 id="youtube-heading" className="section-heading">
+              動画で分かる産廃業界DX
+            </h2>
+            <p className="section-subheading">
+              産業廃棄物・再生資源業界のDX推進やMEO対策の事例をYouTubeで公開中。
+              <br />
+              現場のリアルな声と実践ノウハウをお届けします。
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              {/* Video Topic Cards - linking to YouTube */}
+              <a
+                href="https://www.youtube.com/@socialbridge2019"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card group hover:shadow-lg transition-shadow"
+              >
+                <div className="text-3xl mb-3" aria-hidden="true">📍</div>
+                <h3 className="text-lg font-bold mb-2 group-hover:text-primary-600 transition-colors">
+                  MEO対策で集客力UP
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Googleマップで「産廃 回収」と検索されたとき、御社は上位表示されていますか？
+                  MEO対策の基本から実践まで動画で解説しています。
+                </p>
+                <span className="inline-block mt-3 text-primary-600 text-sm font-medium">
+                  YouTubeで見る →
+                </span>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@socialbridge2019"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card group hover:shadow-lg transition-shadow"
+              >
+                <div className="text-3xl mb-3" aria-hidden="true">📱</div>
+                <h3 className="text-lg font-bold mb-2 group-hover:text-primary-600 transition-colors">
+                  LINE公式で問い合わせ倍増
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  LINE公式アカウントと自動応答を組み合わせた、24時間対応の問い合わせ環境。
+                  導入事例と効果を動画で紹介します。
+                </p>
+                <span className="inline-block mt-3 text-primary-600 text-sm font-medium">
+                  YouTubeで見る →
+                </span>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@socialbridge2019"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card group hover:shadow-lg transition-shadow"
+              >
+                <div className="text-3xl mb-3" aria-hidden="true">🔧</div>
+                <h3 className="text-lg font-bold mb-2 group-hover:text-primary-600 transition-colors">
+                  産廃業界DX最前線
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  70年の現場経験×最新テクノロジー。自社でDXを実践してきたからこそ伝えられる、
+                  産廃・再生資源業界のリアルなDX事例。
+                </p>
+                <span className="inline-block mt-3 text-primary-600 text-sm font-medium">
+                  YouTubeで見る →
+                </span>
+              </a>
+            </div>
+
+            <div className="text-center mt-10 space-y-4">
+              <a
+                href="https://www.youtube.com/@socialbridge2019"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" />
+                  <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#fff" />
+                </svg>
+                チャンネルを見る
+              </a>
+              <p className="text-gray-500 text-sm">
+                DX・MEO対策の無料相談も受付中 →{' '}
+                <Link href="/contact/" className="text-primary-600 hover:underline font-medium">
+                  お問い合わせ
+                </Link>
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 md:py-20 bg-primary-700 text-white" aria-labelledby="cta-heading">
           <div className="container mx-auto px-4 text-center">

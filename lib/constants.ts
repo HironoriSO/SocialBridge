@@ -45,6 +45,8 @@ export const COMPANY_INFO = {
   },
   social: {
     facebook: 'https://www.facebook.com/social.bridge.fanpage/',
+    youtube: 'https://www.youtube.com/@socialbridge2019',
+    note: 'https://note.com/socialbridge',
   },
   phone: '',
   email: '',
